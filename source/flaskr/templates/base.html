@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<title>
+    I116E Number Slider - {% block title %}{% endblock %}
+</title>
+
+<link rel = "stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-4">I116E Number Slider</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Report</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Presentation</a></li>
+      </ul>
+    </header>
+</div>
+
+<body>
+<section class="content d-flex w-100 h-100 justify-content-center">
+    <header>
+        {% block header %}{% endblock %}
+    </header>
+    <div class="home-welcome d-flex w-100 h-100 p-3 text-center flex-column">
+        <img src="static/birb.gif" alt="https://imgur.com/gallery/e1hacx3">
+        <h1>Number Slider</h1>
+        <p class="lead">Number Slider is a number ordering puzzle where players slide the number tiles such that the final number sequence is in a correct order starting from the top-left corner, either ascending or descending, colunm-wise or row-wise.</p>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-blue">Play randomized puzzles</a>
+          <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-blue">Play customized puzzles</a>
+        </p>
+    </div>
+</section>
+</body>
+</html>

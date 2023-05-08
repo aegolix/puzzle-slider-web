@@ -1,0 +1,14 @@
+html, body {
+  height: 100%
+}
+
+.home-welcome {
+    max-width: 48em;
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
