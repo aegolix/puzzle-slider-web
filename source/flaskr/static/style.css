@@ -4,11 +4,16 @@ html, body {
 
 .home-welcome {
     max-width: 48em;
+    align-items: center;
+    justify-content: center;
 }
 
 .content {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.game-content {
+    padding-top: 8em;
 }

@@ -2,6 +2,9 @@ import os
 
 from flask import Flask, render_template
 
+from flaskr.random_puzzle import random_puzzle
+from flaskr.custom_puzzle import custom_puzzle
+
 # create and configure the app
 app = Flask(__name__, instance_relative_config=True)
 app.config.from_mapping(
@@ -24,5 +27,8 @@ except OSError:
 
 # a simple page that says hello
 @app.route('/')
-def hello():
+def home():
     return render_template('base.html')
+
+app.register_blueprint(random_puzzle.random_puzzle_bp, url_prefix = '/play-random-puzzle')
+app.register_blueprint(custom_puzzle.custom_puzzle_bp, url_prefix = '/play-custom-puzzle')
