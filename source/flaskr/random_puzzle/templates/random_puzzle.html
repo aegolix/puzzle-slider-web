@@ -7,3 +7,7 @@
     <h1>Hi randomized puzzle here</h1>
 </div>
 {% endblock %}
+
+{% block scripts %}
+<script src="{{url_for('static', filename='random_puzzle_handler.js')}}"></script>
+{% endblock scripts %}
