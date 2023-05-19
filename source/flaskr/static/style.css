@@ -17,3 +17,21 @@ html, body {
 .game-content {
     padding-top: 8em;
 }
+
+.puzzle-tile-number {
+    display: table-cell;
+    width: 120px;
+    height: 120px;
+    border: 2px solid rgb(7, 83, 110);
+    background-color: wheat;
+    cursor: pointer;
+    border-radius: 4px;
+    align-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+.puzzle-tile-zero {
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}

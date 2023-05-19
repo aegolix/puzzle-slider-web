@@ -38,15 +38,16 @@
                 final number sequence is in a correct order starting from the top-left corner, either ascending or
                 descending, colunm-wise or row-wise.</p>
             <p class="lead">
-                <a href="/play-random-puzzle" class="btn btn-lg btn-light fw-bold border-white bg-blue">Play randomized
+                <a href="/random-puzzle" class="btn btn-lg btn-light fw-bold border-white bg-blue">Play randomized
                     puzzles</a>
-                <a href="/play-custom-puzzle" class="btn btn-lg btn-light fw-bold border-white bg-blue">Play customized puzzles</a>
+                <a href="/custom-puzzle" class="btn btn-lg btn-light fw-bold border-white bg-blue">Play customized puzzles</a>
             </p>
         </div>
         {% endblock %}        
     </section>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <script type="module" src="{{ url_for('static', filename='puzzle.js') }}"></script>
+    {% block scripts %}{% endblock scripts %}
 </body>
-
-{% block scripts %}{% endblock scripts %}
 
 </html>

@@ -3,11 +3,18 @@
 {% block mode %}Randomized puzzle{% endblock %}
 
 {% block content %}
-<div class="content game-content">
-    <h1>Hi randomized puzzle here</h1>
+<div class="content game-content row h-25 align-items-center justify-content-center">
+    <form class="form-inline" id="rpuzzle-input-form">
+        <div class="form-group">
+            <label for="rpuzzle-input-n">It is an NxN puzzle, please enter N: </label>
+            <input type="number" id="rpuzzle-input-n"  class="form-control col-sm-6" placeholder="N ≥ 4" min="4" max="22">
+        </div>
+        <button type="button" class="btn btn-primary mb-2" id="rpuzzle-submit-button">Create puzzle!</button>
+    </form>
+    <div id="rpuzzle-holder"></div>
 </div>
 {% endblock %}
 
 {% block scripts %}
-<script src="{{url_for('static', filename='random_puzzle_handler.js')}}"></script>
+<script type="module" src="{{ url_for('random_puzzle_bp.static', filename='random_puzzle_handler.js') }}"></script>
 {% endblock scripts %}
