@@ -22,16 +22,30 @@ html, body {
     display: table-cell;
     width: 120px;
     height: 120px;
-    border: 2px solid rgb(7, 83, 110);
-    background-color: wheat;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(255, 205, 69);
     cursor: pointer;
     border-radius: 4px;
     align-content: center;
     align-items: center;
-    text-align: justify;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
 }
 
 .puzzle-tile-zero {
     border: 2px solid rgb(255, 255, 255);
     background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+.puzzle-holder {
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 4px;
+}
+
+.modal-dialog {
+    top: calc(100% - 300px);
+    box-shadow: 4px 4px 8px #0000003e;
+    border-radius: 4px;
 }

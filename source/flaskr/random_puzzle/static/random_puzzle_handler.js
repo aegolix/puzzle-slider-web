@@ -1,6 +1,7 @@
 import Puzzle from './../../static/puzzle.js';
-const serverURL = 'http://127.0.0.1:5000/random-puzzle/';
-const subURL_makeRandomNumlist = 'make-random-numlist';
+import * as CONSTANT from './../../static/constant.js'; 
+
+var randomPuzzle = null;
 
 function submitCreatePuzzle() {
     var n = document.getElementById('rpuzzle-input-n').value;
@@ -12,14 +13,18 @@ function submitCreatePuzzle() {
             var receiveData = JSON.parse(this.responseText);
             console.log(receiveData['numlist']);
             numlist = receiveData['numlist'];
-            var randomPuzzle = new Puzzle(n, document.getElementById('rpuzzle-holder'), numlist);
+            
+            if (randomPuzzle != null) {
+                randomPuzzle.reset();
+            }
+            randomPuzzle = new Puzzle(n, document.getElementById('rpuzzle-holder'), numlist);
             randomPuzzle.createPuzzle();
         }
     };
     
     var sendData = JSON.stringify({'N': n});
 
-    xhttp.open('POST', serverURL + subURL_makeRandomNumlist, true);
+    xhttp.open('POST', CONSTANT.RANDOM_URL + CONSTANT.SUB_URL_MAKE_RANDOM_NUMLIST, true);
     xhttp.send(sendData);
 }
 

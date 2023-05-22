@@ -5,10 +5,12 @@
 </title>
 
 <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<link rel="stylesheet" href="{{url_for('static', filename = 'bootstrap.css')}}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
-<div class="container fixed-top justify-content-between">
+<script type="javascript/text" src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
+
+<div class="container fixed-top justify-content-between bg-light">
     <header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">
         <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
             <svg class="bi me-2" width="40" height="32">
@@ -17,7 +19,7 @@
             <span class="fs-4">I116E Number Slider</span>
         </a>
 
-        <h4>{% block mode %}{% endblock %}</h4>
+        <h4 class="mt-2">{% block mode %}{% endblock %}</h4>
 
         <ul class="nav nav-pills">
             <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Home</a></li>
@@ -28,6 +30,7 @@
 </div>
 
 <body>
+
     <section class="content d-flex w-100 h-100">        
         {% block content %}
             
@@ -38,9 +41,9 @@
                 final number sequence is in a correct order starting from the top-left corner, either ascending or
                 descending, colunm-wise or row-wise.</p>
             <p class="lead">
-                <a href="/random-puzzle" class="btn btn-lg btn-light fw-bold border-white bg-blue">Play randomized
+                <a href="/random-puzzle" class="btn btn-lg btn-primary fw-bold bg-blue">Play randomized
                     puzzles</a>
-                <a href="/custom-puzzle" class="btn btn-lg btn-light fw-bold border-white bg-blue">Play customized puzzles</a>
+                <a href="/custom-puzzle" class="btn btn-lg btn-primary fw-bold bg-blue">Play customized puzzles</a>
             </p>
         </div>
         {% endblock %}        

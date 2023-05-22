@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 
 from flaskr.random_puzzle import random_puzzle
 from flaskr.custom_puzzle import custom_puzzle
