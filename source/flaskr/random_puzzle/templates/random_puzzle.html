@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block mode %}Randomized puzzle{% endblock %}
+
+{% block content %}
+<div class="content game-content col-md-6 row h-25 align-items-center justify-content-center">
+
+    <form class="form-inline col-sm-12" id="rpuzzle-input-form">
+        <div class="input-group justify-content-center align-items-center">
+            <label for="rpuzzle-input-n" class=" mb-2">Create an <a style="font-family: 'Courier New', Courier, monospace; font-weight: bold;">NxN</a> puzzle, please enter <a style="font-family: 'Courier New', Courier, monospace; font-weight: bold;">N</a>: </label>
+            <div class="form-group mx-sm-4 mb-2">
+                <input type="number" id="rpuzzle-input-n" class="form-control col-sm-1" placeholder="N ≥ 4" min="3"
+                    max="22">
+            </div>
+            <button type="button" class="btn btn-primary mb-2" id="rpuzzle-submit-button">Create puzzle!</button>
+        </div>
+    </form>
+
+    <div class="d-flex align-items-center justify-content-center p-3" id="rpuzzle-holder"></div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="modal-end-game-control" style="display: none;">
+        <div class="modal-dialog modal-lg" role="document" style="align-items: flex-end;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center">✨✨✨ Congratulations! You have successfully solved the puzzle! ✨✨✨
+                    </h5>
+                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close" id="button-close-x">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <p>You can see the shortest move answer, keep on playing or take a break.</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary" id="button-see-shortest-answer">Shortest
+                        answer</button>
+                    <button type="button" class="btn btn-primary" id="button-replay">Replay</button>
+                    <button type="button" class="btn btn-primary" id="button-play-random">New Randomized</button>
+                    <button type="button" class="btn btn-primary" id="button-play-custom">New Customized</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        id="button-stop-playing">Stop playing</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script type="module" src="{{ url_for('random_puzzle_bp.static', filename='random_puzzle_handler.js') }}"></script>
+{% endblock scripts %}
