@@ -1,0 +1,58 @@
+A LEAST-MOVE SOLUTION IS FOUND!
+ORDER: row-des
+NUMBER OF MOVES: 8
+MOVE SEQUENCE:
+15	14	13	12	
+6	11	9	8	
+0	10	5	4	
+7	3	2	1	
+
+Next move: down
+15	14	13	12	
+0	11	9	8	
+6	10	5	4	
+7	3	2	1	
+
+Next move: left
+15	14	13	12	
+11	0	9	8	
+6	10	5	4	
+7	3	2	1	
+
+Next move: up
+15	14	13	12	
+11	10	9	8	
+6	0	5	4	
+7	3	2	1	
+
+Next move: right
+15	14	13	12	
+11	10	9	8	
+0	6	5	4	
+7	3	2	1	
+
+Next move: up
+15	14	13	12	
+11	10	9	8	
+7	6	5	4	
+0	3	2	1	
+
+Next move: left
+15	14	13	12	
+11	10	9	8	
+7	6	5	4	
+3	0	2	1	
+
+Next move: left
+15	14	13	12	
+11	10	9	8	
+7	6	5	4	
+3	2	0	1	
+
+Next move: left
+15	14	13	12	
+11	10	9	8	
+7	6	5	4	
+3	2	1	0	
+
+Next move: Oh no need, the goal is reached now! ^^

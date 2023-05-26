@@ -18,9 +18,9 @@ def make_random_numlist():
     print('Receive request make random list', receive_data)
 
     N = int(receive_data['N'])
-    numlist = [i for i in range(0, N*N)]
-    # numlist[-1] = 0
-    random.shuffle(numlist) # turn on after dev
+    numlist = [i+1 for i in range(0, N*N)]
+    numlist[-1] = 0
+    # random.shuffle(numlist) # turn on after dev
 
     sendDataRaw = {
         'numlist': numlist
